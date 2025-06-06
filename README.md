@@ -22,5 +22,68 @@
 ```bash
 git clone https://github.com/Codex1ntech/env-checker-cli.git
 cd env-checker-cli
-chmod +x check-env.sh
-./check-env.sh -c my-config.env
+chmod +x scripts/env-check.sh
+./scripts/env-check.sh -c config.env
+```
+
+---
+
+## 🧪 Configuration
+
+You can create a custom `.env` file to define which variables must exist:
+
+```env
+API_KEY=your-api-key
+USER=naz
+```
+
+Save it as `config.env` or pass a custom one using `-c yourfile.env`.
+
+---
+
+## 📸 Example Output
+
+```bash
+🔍 Checking tools...
+
+✅ git found  
+✅ curl found  
+❌ docker missing  
+
+🔍 Checking variables...
+
+❌ ENV "API_KEY" is not set  
+✅ ENV "USER" is set  
+
+✅ Done
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+env-checker-cli/
+├── README.md
+├── LICENSE
+├── config.env.example
+├── scripts/
+│   └── env-check.sh
+├── examples/
+│   └── sample-output.txt
+```
+
+---
+
+## 🚀 Usage
+
+```bash
+./scripts/env-check.sh
+./scripts/env-check.sh -c my-config.env
+```
+
+---
+
+## 📄 License
+
+MIT License © [Codex1ntech](https://github.com/Codex1ntech)
