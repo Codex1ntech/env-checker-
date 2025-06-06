@@ -1,0 +1,12 @@
+🔍 Checking tools...
+
+✅ git found  
+✅ curl found  
+❌ docker missing  
+
+🔍 Checking variables...
+
+❌ ENV "API_KEY" is not set  
+✅ ENV "USER" is set  
+
+✅ Done
